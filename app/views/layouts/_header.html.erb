@@ -22,7 +22,7 @@
       </div>
       <div class="relative z-10 flex items-center lg:hidden">
         <!-- Mobile menu button -->
-        <button type="button" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-controls="mobile-menu" aria-expanded="false">
+        <button data-header-target="openMobileMenu" type="button" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-controls="mobile-menu" aria-expanded="false">
           <span class="absolute -inset-0.5"></span>
           <span class="sr-only">Open menu</span>
           <!--
@@ -79,7 +79,17 @@
   </div>
 
   <!-- Mobile menu, show/hide based on menu state. -->
-  <nav class="lg:hidden" aria-label="Global" id="mobile-menu">
+  <nav
+    data-header-target="mobileMenu"
+    data-transition-enter="transition ease-out duration-100"
+    data-transition-enter-start="transform opacity-0 scale-95"
+    data-transition-enter-end="transform opacity-100 scale-100"
+    data-transition-leave="transition ease-in duration-75"
+    data-transition-leave-start="transform opacity-100 scale-100"
+    data-transition-leave-end="transform opacity-0 scale-95"
+    class="lg:hidden absolute z-50 bg-white w-full"
+    aria-label="Global"
+    id="mobile-menu">
     <div class="border-t border-gray-200 pb-3 pt-4">
       <div class="flex items-center px-4">
         <div class="flex-shrink-0">

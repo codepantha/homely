@@ -804,6 +804,10 @@ select {
   z-index: 10;
 }
 
+.z-50 {
+  z-index: 50;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -937,6 +941,10 @@ select {
   align-items: center;
 }
 
+.justify-end {
+  justify-content: flex-end;
+}
+
 .justify-center {
   justify-content: center;
 }
@@ -1055,6 +1063,10 @@ select {
 
 .pt-4 {
   padding-top: 1rem;
+}
+
+.text-right {
+  text-align: right;
 }
 
 .text-2xl {

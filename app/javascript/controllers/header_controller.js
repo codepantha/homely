@@ -3,11 +3,15 @@ import { enter, leave, toggle } from 'el-transition';
 
 export default class extends Controller {
 
-  static targets = ['dropdown', 'openUserMenu'];
+  static targets = ['dropdown', 'openUserMenu', 'openMobileMenu', 'mobileMenu'];
 
   connect() {
     this.openUserMenuTarget.addEventListener('click', (e) => {
       openDropdown(this.dropdownTarget)
+    })
+
+    this.openMobileMenuTarget.addEventListener('click', (e) => {
+      openDropdown(this.mobileMenuTarget)
     })
   }
 }
