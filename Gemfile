@@ -10,6 +10,8 @@ gem "importmap-rails"
 
 gem "jbuilder"
 
+gem 'money-rails', '~> 1.12'
+
 gem "pg", "~> 1.1"
 
 gem "puma", ">= 5.0"

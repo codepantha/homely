@@ -8,5 +8,6 @@
     city: Faker::Address.city,
     state: Faker::Address.state,
     country: Faker::Address.country,
+    price: Money.from_amount(rand(50..100), 'USD')
   })
 end
