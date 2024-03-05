@@ -1,2 +1,31 @@
-<h1>Home#index</h1>
-<p class="underline">Find me in app/views/home/index.html.erb</p>
+<div class="bg-white">
+  <div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-16 lg:max-w-7xl lg:px-8">
+    <div class="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
+
+      <% 10.times do %>
+        <div class="group relative">
+          <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
+            <img src="https://hips.hearstapps.com/hmg-prod/images/kim-lewis-casita-1675799318.jpeg?crop=0.669xw:1.00xh;0.114xw,0&resize=640:*" alt="Front of men&#039;s Basic Tee in black." class="h-full w-full object-cover object-center lg:h-full lg:w-full">
+          </div>
+          <div class="mt-2 flex justify-between">
+            <h3 class="text-base font-medium text-gray-700">
+              <a href="#">
+                <span aria-hidden="true" class="absolute inset-0"></span>
+                Texas, USA
+              </a>
+            </h3>
+            <p class="flex items-center text-sm text-gray-500">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" class="w-6 h-6">
+                <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd" />
+              </svg>
+              4.8
+            </p>
+          </div>
+          <p class="mt-0.5 text-sm font-medium text-gray-500">Hosted by Sarah</p>
+          <p class="mt-0.5 text-sm font-medium text-gray-500">10-25 Jan</p>
+          <p class="mt-0.5 text-sm font-medium text-gray-500"><span class="font-bold text-base mr-1">$35</span>per night</p>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
