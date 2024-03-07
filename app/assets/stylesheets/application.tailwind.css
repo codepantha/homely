@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.swiper-container {
+  @apply w-[600px] h-[300px]
+}
