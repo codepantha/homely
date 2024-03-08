@@ -1384,13 +1384,13 @@ select {
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
 }
 
-.swiper {
+.swiper-container {
   position: relative;
   padding-bottom: calc(var(--tw-aspect-h) / var(--tw-aspect-w) * 100%);
   --tw-aspect-w: 1;
 }
 
-.swiper > * {
+.swiper-container > * {
   position: absolute;
   height: 100%;
   width: 100%;
@@ -1400,9 +1400,36 @@ select {
   left: 0;
 }
 
-.swiper {
+.swiper-container {
   --tw-aspect-h: 1;
   width: 100%;
+}
+
+.swiper-container:hover {
+  .swiper-button-next {
+    display: block !important;
+  }
+  .swiper-button-prev {
+    display: block !important;
+  }
+}
+
+.swiper-button-next, .swiper-button-prev {
+  display: none !important;
+  width: 28px !important;
+  height: 28px !important;
+  background: #fff;
+  border-radius: 50%;
+  background-image: url('assets/next.svg');
+  border: 4px solid #fff;
+}
+
+.swiper-button-prev {
+  background-image: url('assets/prev.svg');
+}
+
+.swiper-button-next::after, .swiper-button-prev::after {
+  content: '' !important;
 }
 
 @media (min-width: 1024px) {
@@ -1510,10 +1537,6 @@ select {
 
 .focus-visible\:outline-black:focus-visible {
   outline-color: #000;
-}
-
-.group:hover .group-hover\:opacity-75 {
-  opacity: 0.75;
 }
 
 @media (min-width: 640px) {
