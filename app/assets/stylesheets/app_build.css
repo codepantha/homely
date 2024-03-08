@@ -837,10 +837,6 @@ select {
   inset: -0.375rem;
 }
 
-.inset-0 {
-  inset: 0px;
-}
-
 .inset-y-0 {
   top: 0px;
   bottom: 0px;
@@ -1388,9 +1384,25 @@ select {
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
 }
 
-.swiper-container {
-  height: 300px;
-  width: 600px;
+.swiper {
+  position: relative;
+  padding-bottom: calc(var(--tw-aspect-h) / var(--tw-aspect-w) * 100%);
+  --tw-aspect-w: 1;
+}
+
+.swiper > * {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.swiper {
+  --tw-aspect-h: 1;
+  width: 100%;
 }
 
 @media (min-width: 1024px) {
