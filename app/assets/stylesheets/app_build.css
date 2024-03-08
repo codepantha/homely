@@ -1202,6 +1202,10 @@ select {
   padding-bottom: 0.75rem;
 }
 
+.pb-0 {
+  padding-bottom: 0px;
+}
+
 .pb-3 {
   padding-bottom: 0.75rem;
 }
@@ -1385,24 +1389,42 @@ select {
 }
 
 .swiper-container {
-  position: relative;
-  padding-bottom: calc(var(--tw-aspect-h) / var(--tw-aspect-w) * 100%);
-  --tw-aspect-w: 1;
+  width: 100%;
+  padding-bottom: 0px !important;
 }
 
-.swiper-container > * {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+@media (min-width: 1024px) {
+  .swiper-container {
+    position: relative;
+    padding-bottom: calc(var(--tw-aspect-h) / var(--tw-aspect-w) * 100%);
+    --tw-aspect-w: 1;
+  }
+
+  .swiper-container > * {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  .swiper-container {
+    --tw-aspect-h: 1;
+  }
 }
 
-.swiper-container {
-  --tw-aspect-h: 1;
-  width: 100%;
+@media (max-width: 1024px) {
+  .swiper-wrapper {
+    height: 250px !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .swiper-wrapper {
+    height: 400px !important;
+  }
 }
 
 .swiper-container:hover {
