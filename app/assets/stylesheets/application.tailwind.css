@@ -49,6 +49,12 @@
   background-image: url('assets/prev.svg');
 }
 
+/* 
+content
+cleanliness, accuracy, checkin, communication, location
+value, final, user:reference, property:references
+*/
+
 .swiper-button-next::after, .swiper-button-prev::after {
   content: '' !important;
 }

@@ -1,3 +1,8 @@
+user = User.create!({
+  email: 'test@gmail.com',
+  password: 'password'
+})
+
 6.times do |i|
   property = Property.create!({
     name: Faker::Lorem.unique.sentence(word_count: 3),
@@ -13,4 +18,18 @@
 
   property.images.attach(io: File.open("db/images/property_#{i + 1}.png"), filename: property.name)
   property.images.attach(io: File.open("db/images/property_#{i + 7}.png"), filename: property.name)
+
+  rand(5..10).times do
+    Review.create!({
+      content: Faker::Lorem.paragraph(sentence_count: 10),
+      cleanliness_rating: rand(1..5),
+      accuracy_rating: rand(1..5),
+      checkin_rating: rand(1..5),
+      communication_rating: rand(1..5),
+      location_rating: rand(1..5),
+      value_rating: rand(1..5),
+      property: property,
+      user: user
+    })
+  end
 end
