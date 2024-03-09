@@ -18,5 +18,8 @@ class Review < ApplicationRecord
 
     final_rating = total_ratings.to_f / 6
     update_column(:final_rating, final_rating)
+
+    # update the average_final_rating on property
+    property.update_average_rating
   end
 end
