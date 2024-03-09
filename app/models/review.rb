@@ -1,6 +1,6 @@
 class Review < ApplicationRecord
   belongs_to :user
-  belongs_to :property
+  belongs_to :property, counter_cache: true
 
   validates :content, presence: true
   validates :cleanliness_rating, numericality: { only_integer: true, greater_than_or_equal_to: 1, less_than_or_equal_to: 5 }
