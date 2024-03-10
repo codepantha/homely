@@ -850,6 +850,10 @@ select {
   right: 0px;
 }
 
+.top-0 {
+  top: 0px;
+}
+
 .z-0 {
   z-index: 0;
 }
@@ -860,6 +864,10 @@ select {
 
 .z-50 {
   z-index: 50;
+}
+
+.m-4 {
+  margin: 1rem;
 }
 
 .mx-auto {
@@ -1027,6 +1035,10 @@ select {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.cursor-pointer {
+  cursor: pointer;
+}
+
 .grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
@@ -1136,6 +1148,22 @@ select {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.fill-primary {
+  fill: #ff5a5f;
+}
+
+.fill-none {
+  fill: none;
+}
+
+.stroke-white {
+  stroke: #fff;
+}
+
+.stroke-2 {
+  stroke-width: 2;
 }
 
 .object-cover {
@@ -1449,6 +1477,12 @@ select {
 .swiper-button-prev {
   background-image: url('assets/prev.svg');
 }
+
+/* 
+content
+cleanliness, accuracy, checkin, communication, location
+value, final, user:reference, property:references
+*/
 
 .swiper-button-next::after, .swiper-button-prev::after {
   content: '' !important;
