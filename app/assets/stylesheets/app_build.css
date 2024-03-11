@@ -1150,12 +1150,12 @@ select {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.fill-primary {
-  fill: #ff5a5f;
-}
-
 .fill-none {
   fill: none;
+}
+
+.fill-primary {
+  fill: #ff5a5f;
 }
 
 .stroke-white {
