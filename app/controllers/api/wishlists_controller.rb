@@ -1,5 +1,7 @@
 module Api
   class WishlistsController < ApplicationController
+    protect_from_forgery with: :null_session
+
     def create
       wishlist = Wishlist.new(wishlist_params)
 
