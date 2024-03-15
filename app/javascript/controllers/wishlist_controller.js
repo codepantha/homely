@@ -10,14 +10,8 @@ export default class extends Controller {
     }
 
     let status = this.element.dataset.status;
-    if (status === 'false') {
-      this.addPropertyToWishlist()
-      
-    } else {
-      this.element.classList.remove('fill-primary');
-      this.element.classList.add('fill-none');
-      this.element.dataset.status = 'false';
-    }
+    if (status === 'false') this.addPropertyToWishlist();
+    else this.removePropertyFromWishlist();
   }
 
   async addPropertyToWishlist() {
@@ -41,6 +35,25 @@ export default class extends Controller {
         this.element.classList.remove('fill-none');
         this.element.classList.add('fill-primary');
         this.element.dataset.status = 'true';
+      }
+    } catch (e) {
+      console.log(e);
+    }
+  }
+
+  async removePropertyFromWishlist() {
+    try {
+      const response = await fetch(
+        `/api/wishlists/${this.element.dataset.wishlistId}`,
+        {
+          method: 'DELETE'
+        }
+      );
+
+      if (response.status === 204) {
+        this.element.classList.remove('fill-primary');
+        this.element.classList.add('fill-none');
+        this.element.dataset.status = 'false';
       }
     } catch (e) {
       console.log(e);

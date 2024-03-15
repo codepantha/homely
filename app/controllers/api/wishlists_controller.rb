@@ -13,7 +13,7 @@ module Api
     end
 
     def destroy
-      wishlist = Wishlist.where(params[:id])
+      wishlist = Wishlist.find(params[:id])
       wishlist.destroy
 
       head :no_content
