@@ -35,6 +35,7 @@ export default class extends Controller {
         this.element.classList.remove('fill-none');
         this.element.classList.add('fill-primary');
         this.element.dataset.status = 'true';
+        this.element.dataset.wishlistId = data.id;
       }
     } catch (e) {
       console.log(e);
